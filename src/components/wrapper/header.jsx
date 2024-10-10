@@ -8,10 +8,10 @@ const Header = ({ pageName, back }) => {
             <div className="flex items-center p-1">
                 {pageName === "Event" ? (
                     <img
-                        src="/calendar.png"
+                        src="/aaua.png"
                         alt="img"
                         width={30}
-                        class="mr-4"
+                        class="mr-4 rounded-full"
                     />
                 ) : (
                     <IconifyIcon

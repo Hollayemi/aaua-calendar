@@ -184,7 +184,10 @@ const CalendarModal = () => {
                     <label htmlFor="title" className="form__label">
                         Event Category
                     </label>
-                    <select className="form__input">
+                    <select
+                        className="form__input"
+                        onChange={handleInputChange}
+                    >
                         {categories.map((each) => (
                             <option value={each}>{each}</option>
                         ))}

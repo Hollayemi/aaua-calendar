@@ -33,56 +33,68 @@ const LoginScreen = () => {
   };
 
   return (
-    <section className="card">
-      <div className="card__row card__row--right">
-        <div className="card__body">
-          <h1 className="card__title">Login</h1>
-          <form className="form" onSubmit={handleLogin}>
-            {msgError && <Alert type="error" description={msgError} />}
-            <div className="form__field">
-              <label htmlFor="email" className="form__label">
-                Email
-              </label>
-              <input
-                className="form__input"
-                type="email"
-                name="email"
-                id="email"
-                value={email}
-                onChange={handleInputChange}
-              />
-            </div>
-            <div className="form__field">
-              <label htmlFor="password" className="form__label">
-                Password
-              </label>
-              <input
-                className="form__input"
-                type="password"
-                name="password"
-                id="password"
-                value={password}
-                onChange={handleInputChange}
-              />
-            </div>
-            <button className="btn btn-primary" type="submit">
-              Login
-            </button>
-          </form>
-        </div>
-      </div>
-      <div className="card__row card__row--colored card__row--left">
-        <div className="card__body">
-          <h2 className="card__subtitle">You're new?</h2>
-          <p className="card__description">
-            Register and discover a great amount of features
-          </p>
-          <Link className="btn btn-primary--outline" to={"/auth/register"}>
-            Create account
-          </Link>
-        </div>
-      </div>
-    </section>
+      <section className="card">
+          <div className="card__row card__row--right">
+              <div className="card__body">
+                  <h1 className="card__title">Login</h1>
+                  <form className="form" onSubmit={handleLogin}>
+                      {msgError && (
+                          <Alert type="error" description={msgError} />
+                      )}
+                      <div className="form__field">
+                          <label htmlFor="email" className="form__label">
+                              Email
+                          </label>
+                          <input
+                              className="form__input"
+                              type="email"
+                              name="email"
+                              id="email"
+                              value={email}
+                              onChange={handleInputChange}
+                          />
+                      </div>
+                      <div className="form__field">
+                          <label htmlFor="password" className="form__label">
+                              Password
+                          </label>
+                          <input
+                              className="form__input"
+                              type="password"
+                              name="password"
+                              id="password"
+                              value={password}
+                              onChange={handleInputChange}
+                          />
+                      </div>
+                      <button className="btn btn-primary" type="submit">
+                          Login
+                      </button>
+                  </form>
+              </div>
+          </div>
+          <div className="card__row card__row--colored card__row--left">
+              <div className="card__body !flex !flex-col !items-center">
+                  <img
+                      src="/aaua.png"
+                      alt="img"
+                      width={60}
+                      class="mr-4 rounded-full mb-4"
+                  />
+                  <h2 className="card__subtitle">You're new?</h2>
+
+                  <p className="card__description">
+                      Register and discover a great amount of features
+                  </p>
+                  <Link
+                      className="btn btn-primary--outline"
+                      to={"/auth/register"}
+                  >
+                      Create account
+                  </Link>
+              </div>
+          </div>
+      </section>
   );
 };
 export default LoginScreen;

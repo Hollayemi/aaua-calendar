@@ -7,7 +7,7 @@ const EventInfo = ({ info }) => {
         auth: { list },
     } = useSelector((state) => state);
     console.log(info);
-    const isIn = list.includes(info.id);
+    const isIn = list?.includes(info.id);
     return (
         <div className="p-2">
             <div>
